@@ -50,21 +50,21 @@ let products =[
         desc : "คีย์บอร์ดเกมมิ่งเชิงกล LIGHTSPEED Wireless RGB"
     },{
         id: 8,
-        img: "./img/",
+        img: "./img/X107.jpg",
         name : "Nubwo NBCH X107",
         price : 5490,
         quantity : 15,
         desc : "Nubwo Gaming Chair for Game/Office Decorate with RGB lights"
     },{
         id: 9,
-        img: "./img/",
+        img: "./img/X360.jpg",
         name : "Nubwo X360 NJ-29",
         price : 690,
         quantity : 100,
         desc : "Nubwo Gaming Controller with Connection USB 2.0"
     },{
         id: 10,
-        img: "./img/",
+        img: "./img/K380.jpg",
         name : "K380 Multi-device Bluetooth Keyboard",
         price : 1050,
         quantity : 70,
