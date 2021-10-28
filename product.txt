@@ -1,0 +1,601 @@
+{
+  "products": [{
+    "productcode": "P01",
+    "productname": "Logitech Pebble M350",
+    "productdescription": "Wireless Mouse with Nano Receiver Sensor 1000 Dpi",
+    "productimage": "P01.jpg",
+    "productprice": 680,
+    "releasedate": "2019-06-02",
+    "brandid": "B01",
+    "brand": {
+      "brandid": "B01",
+      "brandname": "Logitech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC03",
+      "productcode": "P01",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC02",
+      "productcode": "P01",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC01",
+      "productcode": "P01",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P02",
+    "productname": "H150 Stereo Headset",
+    "productdescription": "Logitech Headset with Stereo sound and Dual connection plug",
+    "productimage": "P02.jpg",
+    "productprice": 550,
+    "releasedate": "2019-09-08",
+    "brandid": "B01",
+    "brand": {
+      "brandid": "B01",
+      "brandname": "Logitech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC05",
+      "productcode": "P02",
+      "colorid": "C04",
+      "colorNames": "Blue",
+      "colorValues": "#0000FF"
+    }, {
+      "productcolorid": "PC04",
+      "productcode": "P02",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC06",
+      "productcode": "P02",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }]
+  }, {
+    "productcode": "P03",
+    "productname": "K380 Multi-device Bluetooth Keyboard",
+    "productdescription": "Multi-Device Keyboard Bluetooth From Logitech",
+    "productimage": "P03.jpg",
+    "productprice": 1050,
+    "releasedate": "2020-06-18",
+    "brandid": "B01",
+    "brand": {
+      "brandid": "B01",
+      "brandname": "Logitech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC08",
+      "productcode": "P03",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC09",
+      "productcode": "P03",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC07",
+      "productcode": "P03",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P04",
+    "productname": "Nubwo X360 NJ-29",
+    "productdescription": "Nubwo Gaming Controller with Connection USB 2.0",
+    "productimage": "P04.jpg",
+    "productprice": 690,
+    "releasedate": "2018-05-09",
+    "brandid": "B02",
+    "brand": {
+      "brandid": "B02",
+      "brandname": "Nubwo"
+    },
+    "productcolors": [{
+      "productcolorid": "PC10",
+      "productcode": "P04",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC11",
+      "productcode": "P04",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P05",
+    "productname": "Nubwo NBCH X107",
+    "productdescription": "Nubwo Gaming Chair for Game/Office Decorate with RGB lights",
+    "productimage": "P05.jpg",
+    "productprice": 5490,
+    "releasedate": "2020-01-12",
+    "brandid": "B02",
+    "brand": {
+      "brandid": "B02",
+      "brandname": "Nubwo"
+    },
+    "productcolors": [{
+      "productcolorid": "PC13",
+      "productcode": "P05",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC12",
+      "productcode": "P05",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P06",
+    "productname": "Razer SPHEX V3",
+    "productdescription": "Ultra-thin Gaming Mouse Mat 0.4mm thin with polycarbon build",
+    "productimage": "P06.jpg",
+    "productprice": 786,
+    "releasedate": "2019-05-19",
+    "brandid": "B03",
+    "brand": {
+      "brandid": "B03",
+      "brandname": "Razer"
+    },
+    "productcolors": [{
+      "productcolorid": "PC14",
+      "productcode": "P06",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC15",
+      "productcode": "P06",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P07",
+    "productname": "Razer SEIREN Emote",
+    "productdescription": "Streaming USB Microphone with 8-Bit Emoticon LED Display",
+    "productimage": "P07.jpg",
+    "productprice": 5660,
+    "releasedate": "2020-06-07",
+    "brandid": "B03",
+    "brand": {
+      "brandid": "B03",
+      "brandname": "Razer"
+    },
+    "productcolors": [{
+      "productcolorid": "PC17",
+      "productcode": "P07",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC16",
+      "productcode": "P07",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P08",
+    "productname": "LUMINOUS C30",
+    "productdescription": "Quad High Definition Webcam 1440P Video with Versatile Mounting Options",
+    "productimage": "P08.jpg",
+    "productprice": 1115,
+    "releasedate": "2018-09-30",
+    "brandid": "B04",
+    "brand": {
+      "brandid": "B04",
+      "brandname": "Fantech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC19",
+      "productcode": "P08",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC18",
+      "productcode": "P08",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC20",
+      "productcode": "P08",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }]
+  }, {
+    "productcode": "P09",
+    "productname": "SHOOTER GP11",
+    "productdescription": "Fantech Controller CG7 Series LightWeight Design Ultimate Control",
+    "productimage": "P09.jpg",
+    "productprice": 445,
+    "releasedate": "2019-08-08",
+    "brandid": "B04",
+    "brand": {
+      "brandid": "B04",
+      "brandname": "Fantech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC21",
+      "productcode": "P09",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC23",
+      "productcode": "P09",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }, {
+      "productcolorid": "PC22",
+      "productcode": "P09",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P10",
+    "productname": "HyperX Pulsefire Raid",
+    "productdescription": "Light Weight Mouse with 11 Button and Sensor 3389 Custom By HyperX NGENUITY ",
+    "productimage": "P10.jpg",
+    "productprice": 1490,
+    "releasedate": "2020-06-11",
+    "brandid": "B05",
+    "brand": {
+      "brandid": "B05",
+      "brandname": "Hyper X"
+    },
+    "productcolors": [{
+      "productcolorid": "PC26",
+      "productcode": "P10",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC24",
+      "productcode": "P10",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC25",
+      "productcode": "P10",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P11",
+    "productname": "HyperX QuadCast",
+    "productdescription": "Microphone For Steamimg/Podcast with RGB Effect and Sound filter",
+    "productimage": "P11.jpg",
+    "productprice": 4390,
+    "releasedate": "2020-10-19",
+    "brandid": "B05",
+    "brand": {
+      "brandid": "B05",
+      "brandname": "Hyper X"
+    },
+    "productcolors": [{
+      "productcolorid": "PC27",
+      "productcode": "P11",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC28",
+      "productcode": "P11",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }]
+  }, {
+    "productcode": "P12",
+    "productname": "Rival 3 USB Wireless Tranmitter",
+    "productdescription": "Replacement transmitter for Rival 3 Wireless gaming mouse",
+    "productimage": "P12.jpg",
+    "productprice": 314,
+    "releasedate": "2019-11-21",
+    "brandid": "B06",
+    "brand": {
+      "brandid": "B06",
+      "brandname": "Steelseries"
+    },
+    "productcolors": [{
+      "productcolorid": "PC29",
+      "productcode": "P12",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC30",
+      "productcode": "P12",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P13",
+    "productname": "TUSQ",
+    "productdescription": "In-ear Moblie Gaming Headset, Dual Microphone design with 3 sizes of best-in class silicone ear tips",
+    "productimage": "P13.jpg",
+    "productprice": 1257,
+    "releasedate": "2020-12-25",
+    "brandid": "B06",
+    "brand": {
+      "brandid": "B06",
+      "brandname": "Steelseries"
+    },
+    "productcolors": [{
+      "productcolorid": "PC32",
+      "productcode": "P13",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC31",
+      "productcode": "P13",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC33",
+      "productcode": "P13",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }]
+  }, {
+    "productcode": "P14",
+    "productname": "NX-F1 Subzero",
+    "productdescription": "Gaming Cooling Pad, Multi-Angel Height and Anti-Slip Baffle",
+    "productimage": "P14.jpg",
+    "productprice": 449,
+    "releasedate": "2019-09-30",
+    "brandid": "B02",
+    "brand": {
+      "brandid": "B02",
+      "brandname": "Nubwo"
+    },
+    "productcolors": [{
+      "productcolorid": "PC34",
+      "productcode": "P14",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC35",
+      "productcode": "P14",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }]
+  }, {
+    "productcode": "P15",
+    "productname": "Razer HUNTSMAN V2 Analog",
+    "productdescription": "Gaming Keyboard with Analog switch Doubleshot PBT keycaps",
+    "productimage": "P15.jpg",
+    "productprice": 7858,
+    "releasedate": "2020-06-28",
+    "brandid": "B03",
+    "brand": {
+      "brandid": "B03",
+      "brandname": "Razer"
+    },
+    "productcolors": [{
+      "productcolorid": "PC37",
+      "productcode": "P15",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC39",
+      "productcode": "P15",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC38",
+      "productcode": "P15",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }, {
+      "productcolorid": "PC36",
+      "productcode": "P15",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P16",
+    "productname": "ALPHA GC-186",
+    "productdescription": "Comfortable Gaming Chair,Suitable for home user/internet cafe",
+    "productimage": "P16.jpg.",
+    "productprice": 10877,
+    "releasedate": "2020-12-07",
+    "brandid": "B04",
+    "brand": {
+      "brandid": "B04",
+      "brandname": "Fantech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC42",
+      "productcode": "P16",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }, {
+      "productcolorid": "PC43",
+      "productcode": "P16",
+      "colorid": "C05",
+      "colorNames": "Pink",
+      "colorValues": "#FFC0CB"
+    }, {
+      "productcolorid": "PC41",
+      "productcode": "P16",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC40",
+      "productcode": "P16",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P17",
+    "productname": "HyperX FURY S Pro",
+    "productdescription": "Gaming Mouse Pad,Anti-fray stitched edges with Natural Rubber Textured",
+    "productimage": "P17.jpg",
+    "productprice": 858,
+    "releasedate": "0019-03-27",
+    "brandid": "B05",
+    "brand": {
+      "brandid": "B05",
+      "brandname": "Hyper X"
+    },
+    "productcolors": [{
+      "productcolorid": "PC45",
+      "productcode": "P17",
+      "colorid": "C04",
+      "colorNames": "Blue",
+      "colorValues": "#0000FF"
+    }, {
+      "productcolorid": "PC44",
+      "productcode": "P17",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }]
+  }, {
+    "productcode": "P18",
+    "productname": "Arctis Pro Main Headset Cable Pack",
+    "productdescription": "Replacement cable set for Arctis Series 3/5/7 with standard 3.5mm connection",
+    "productimage": "P18.jpg",
+    "productprice": 314,
+    "releasedate": "2019-05-19",
+    "brandid": "B06",
+    "brand": {
+      "brandid": "B06",
+      "brandname": "Steelseries"
+    },
+    "productcolors": [{
+      "productcolorid": "PC46",
+      "productcode": "P18",
+      "colorid": "C01",
+      "colorNames": "Black",
+      "colorValues": "#000000"
+    }, {
+      "productcolorid": "PC47",
+      "productcode": "P18",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }]
+  }, {
+    "productcode": "P19",
+    "productname": "TestFromFrontEnd8",
+    "productdescription": "testUpdate8",
+    "productimage": "BZmfeAI.png",
+    "productprice": 4500,
+    "releasedate": "2021-05-09",
+    "brandid": "B01",
+    "brand": {
+      "brandid": "B01",
+      "brandname": "Logitech"
+    },
+    "productcolors": [{
+      "productcolorid": "PC50",
+      "productcode": "P19",
+      "colorid": "C04",
+      "colorNames": "Blue",
+      "colorValues": "#0000FF"
+    }, {
+      "productcolorid": "PC48",
+      "productcode": "P19",
+      "colorid": "C02",
+      "colorNames": "White",
+      "colorValues": "#FFFFFF"
+    }, {
+      "productcolorid": "PC49",
+      "productcode": "P19",
+      "colorid": "C03",
+      "colorNames": "Red",
+      "colorValues": "#FF0000"
+    }]
+  }],
+"brands": [{
+    "brandid": "B01",
+    "brandname": "Logitech"
+  },
+  {
+    "brandid": "B02",
+    "brandname": "Nubwo"
+  },
+  {
+    "brandid": "B03",
+    "brandname": "Razer"
+  },
+  {
+    "brandid": "B04",
+    "brandname": "Fantech"
+  },
+  {
+    "brandid": "B05",
+    "brandname": "Hyper X"
+  },
+  {
+    "brandid": "B06",
+    "brandname": "Steelseries"
+  }
+],
+"colors": [{
+    "colorid": "C01",
+    "colorvalue": "#000000",
+    "colorname": "Black"
+  },
+  {
+    "colorid": "C02",
+    "colorvalue": "#FFFFFF",
+    "colorname": "White"
+  },
+  {
+    "colorid": "C03",
+    "colorvalue": "#FF0000",
+    "colorname": "Red"
+  },
+  {
+    "colorid": "C04",
+    "colorvalue": "#0000FF",
+    "colorname": "Blue"
+  },
+  {
+    "colorid": "C05",
+    "colorvalue": "#FFC0CB",
+    "colorname": "Pink"
+  }
+]
+}
