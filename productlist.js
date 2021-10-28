@@ -12,6 +12,6 @@ export let product =[
         name : "G502",
         price : 5999,
         quantity : 25,
-        desc : "LIGHTSPEED เกมมิ่งเมาส์"
+        desc : "LIGHTSPEED Wireless Gaming Mouse"
     }
 ]
