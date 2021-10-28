@@ -71,3 +71,4 @@ let products =[
         desc : "Multi-Device Keyboard Bluetooth From Logitech"
     }
 ]
+export {products}
