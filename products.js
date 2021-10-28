@@ -12,7 +12,7 @@ let products =[
         name : "G502",
         price : 5999,
         quantity : 25,
-        desc : "LIGHTSPEED เกมมิ่งเมาส์"
+        desc : "LIGHTSPEED GAMING MOUSE"
     },{
         id : 3,
         img : "./img/g604.png",
