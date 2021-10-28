@@ -1,7 +1,7 @@
 export let product =[
     {   
         id : 1,
-        img : "g403.jpg",
+        img : "g403.png",
         name : "G403",
         price : 2699,
         quantity : 50,
