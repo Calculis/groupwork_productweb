@@ -1,11 +1,28 @@
-.product{
-    width: 25%;
-    float:left;
-   
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 body{
-    background-color: antiquewhite;
-    width: 100%;
+    background-color: #F8F3F2;
+    background-repeat: round;
     text-align: center;
     margin: auto;
+    font-family: "Poppins", sans-serif !important;
 }
+html {
+    padding: 50px 50px 75px 100px;
+}
+p:hover {
+    font-size: 14px;
+    background-color: #87CEFA;
+  }
+img {
+    border-radius: 35px;
+    padding: 30px;
+    width: 85%;
+    margin: auto;
+}
+h1{
+    font-weight: 700;
+}
+
+
+

@@ -10,12 +10,12 @@ for(const p of products){
         if(l == "img"){
         const img=document.createElement("img")
         img.setAttribute("src",p[l])
-        img.setAttribute("width","200px")
-        img.setAttribute("height","200px")
+        // img.setAttribute("width","300px")
+        // img.setAttribute("height","250px")
         container.insertBefore(img,container.childNodes[0])
         }
         else{
-         const text = document.createElement("p")
+        const text = document.createElement("p")
         text.setAttribute("class","detail")
         text.textContent= `${l}:${p[l]}`
         container.appendChild(text)
