@@ -22,7 +22,13 @@ for(const p of products){
         // const text= 
         // console.log(text);
     }
+   
     }
+    const addBtn=document.createElement("button")
+    addBtn.className="add"
+    
+    addBtn.textContent="Add to cart"
+    container.appendChild(addBtn)
     main.appendChild(container)
     
 }
