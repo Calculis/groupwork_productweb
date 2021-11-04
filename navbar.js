@@ -6,8 +6,20 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
     <div style="font-size: 24px;" class="ri-game-fill mr-5"></div>
     <div class="mr-5">Group 4's Gamimg Gear Shop</div>
     <div class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+   
+<div class="dropdown">
+<button class="dropbtn">Cart</button>
+<div class="dropdown-content">
+  
+</div>
+// ตรงนี้ก็อปมา
+</div>
     <div class="text-indigo-300 hover:text-white border-2 border-indigo-300 hover:bg-indigo-300 rounded-full transition duration-200 mx-auto px-4 py-2">
+ 
         <i class="ri-shopping-basket-line"></i> Your Cart ( )
+        
+    
+    </div>
     </div>
     </div>
 </div>
