@@ -1,5 +1,4 @@
 const main =document.getElementById("main")
-
 import { products } from "./products.js"
 
 for(const p of products){
