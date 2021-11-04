@@ -1,9 +1,12 @@
 const main =document.getElementById("main")
 import { products } from "./products.js"
-
+var count=1
 for(const p of products){
+    
     const container=document.createElement("div")
-    container.setAttribute("class","product")
+    container.setAttribute("id",`product${String(count)}`)
+    count+=1
+    
     for(const l in p){
        
         if(l == "img"){
@@ -36,5 +39,6 @@ for(const p of products){
     addBtn.textContent="Add to cart"
     container.appendChild(addBtn)
     main.appendChild(container)
+    
     
 }
