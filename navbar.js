@@ -13,7 +13,7 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
 <i class="ri-shopping-basket-line"></i> Your Cart
 
 </div>
-<div class="dropdown-content rounded-lg px-8 bg-indigo-100 mt-1 overflow-y-scroll" style="height: 45vh;">
+<div class="dropdown-content rounded-lg px-8 bg-indigo-100 mt-0.5 overflow-y-scroll" style="height: 45vh;">
   
 </div>
 
