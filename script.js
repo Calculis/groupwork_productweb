@@ -16,6 +16,13 @@ for(const p of products){
         // img.setAttribute("height","250px")
         container.insertBefore(img,container.childNodes[0])
         }
+        else if(l == "name"){
+            const text = document.createElement("p")
+            text.setAttribute("id",p[l])
+            text.textContent= `${l}:${p[l]}`
+            container.appendChild(text)
+
+        }
         else if(l == "id"){
             const text = document.createElement("p")
             text.setAttribute("id",p[l])

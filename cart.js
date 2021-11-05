@@ -10,10 +10,11 @@ for(let i=0;i<allChild.length;i++){
     const bt=allChild[i].lastChild;
     bt.addEventListener("click",()=>{
         if(cart_duplicate(id)==false){
-            cart.unshift({"id":id,quantity:1})
+           const choose_item= {"id":id,name:document.getElementById(id).nextSibling.id,quantity:1}
+            cart.unshift(choose_item)
             const menu=document.createElement("a")
             menu.id= id
-            menu.textContent= `id:${id} quantity:1`
+            menu.textContent= `id:${choose_item.id} Name:${choose_item.name} quantity:1`
             drop[0].appendChild(menu);
             // itemcount++
             console.log(drop[0]);
@@ -25,7 +26,7 @@ for(let i=0;i<allChild.length;i++){
            const no_ch=drop[0].childNodes
             for(let k=0;k<no_ch.length;k++){
                 if(target.id==no_ch[k].id){
-                    no_ch[k].textContent=`id:${no_ch[k].id} quantity:${target.quantity}`
+                    no_ch[k].textContent=`id:${no_ch[k].id} Name:${target.name} quantity:${target.quantity}`
                 }
                     
                 
