@@ -12,6 +12,7 @@ for(const p of products){
         if(l == "img"){
         const img=document.createElement("img")
         img.setAttribute("src",p[l])
+        img.setAttribute("class","rounded-xl mb-4 object-cover mb-4 shadow-lg transform hover:-translate-y-1 cursor-pointer transition duration-500 hover:shadow-2xl")
         // img.setAttribute("width","300px")
         // img.setAttribute("height","250px")
         container.insertBefore(img,container.childNodes[0])
@@ -20,6 +21,7 @@ for(const p of products){
             const text = document.createElement("p")
             text.setAttribute("id",p[l])
             text.textContent= `${l}:${p[l]}`
+            text.setAttribute("class","hover:text-white hover:bg-indigo-300 px-4")
             container.appendChild(text)
 
         }
@@ -27,12 +29,13 @@ for(const p of products){
             const text = document.createElement("p")
             text.setAttribute("id",p[l])
             text.textContent= `${l}:${p[l]}`
+            text.setAttribute("class","hover:text-white hover:bg-indigo-300 px-4")
             container.appendChild(text)
 
         }
         else{
         const text = document.createElement("p")
-        text.setAttribute("class","detail")
+        text.setAttribute("class","hover:text-white hover:bg-indigo-300 px-4")
         text.textContent= `${l}:${p[l]}`
         container.appendChild(text)
         // const text= 

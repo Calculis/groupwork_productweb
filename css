@@ -9,15 +9,7 @@
 /* html {
     padding: 50px 50px 75px 100px;
 } */
-p:hover {
-  font-size: 14px;
-  background-color: #E1E7FD;
 
-}
-img {
-  border-radius: 10px;
-  /* padding-top: 30px; */
-}
 .add {
   background: white;
   padding: 5px;
@@ -52,7 +44,7 @@ img {
     text-decoration: none;
     display: block;
   }
-  .dropdown-content a:hover {background-color: #fff;}
+.dropdown-content a:hover {background-color: #fff;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
