@@ -3,7 +3,11 @@ const addBtn=document.getElementsByClassName("add")
 const drop=document.getElementsByClassName("dropdown-content")
 const cart=[]
 const allChild=main.childNodes
-// var itemcount=1
+const resetBtn = document.createElement("button")
+resetBtn.id="reset"
+resetBtn.textContent="Empty Cart"
+drop[0].appendChild(resetBtn)
+
 for(let i=0;i<allChild.length;i++){
 
     const id=allChild[i].firstChild.nextSibling.id
@@ -15,9 +19,10 @@ for(let i=0;i<allChild.length;i++){
             const menu=document.createElement("a")
             menu.id= id
             menu.textContent= `id:${choose_item.id} Name:${choose_item.name} quantity:1`
-            drop[0].appendChild(menu);
-            // itemcount++
-            console.log(drop[0]);
+            drop[0].insertBefore(menu,drop[0].firstChild);
+            
+            
+            // console.log(drop[0]);
          
         }
         else{
@@ -32,7 +37,7 @@ for(let i=0;i<allChild.length;i++){
                 
             }
             
-
+            
            
 
         }
@@ -48,5 +53,19 @@ const cart_duplicate=(id)=>{
   }
   return false
 }
+const resetCart=()=>{
+    const confirm_del=confirm("Delete all item in your cart?")
+    if(confirm_del){
+    cart.length=0
+    const all_item=drop[0].childNodes
+    for(let i=0;i<all_item.length-1;i++){
+        drop[0].firstChild.remove()
+    }
+   
+}
+}
 
-// เหลือเพิ่มปุ่ม ล้างตะกร้า
+resetBtn.addEventListener("click",resetCart)
+
+
+

@@ -20,6 +20,7 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
 </div>
    
     </div>
+   
     </div>
 </div>
 </div>`;
