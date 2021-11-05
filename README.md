@@ -1,8 +1,8 @@
 # groupwork_productweb
 ที่เสร็จแล้ว
-- nav bar
-- cart
-- reset cart
+- nav bar (พี่นำ้หวาน)
+- cart  (นนท์)
+- reset cart (นนท์)
 
 ที่ยังไม่เสร็จ
 - search
