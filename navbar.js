@@ -10,7 +10,7 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
 <div class="dropdown">
  <div class="text-indigo-300 hover:text-white border-2 border-indigo-300 hover:bg-indigo-300 rounded-full transition duration-200 mx-auto px-4 py-2">
  
-<i class="ri-shopping-basket-line"></i> Your Cart ( )
+<i class="ri-shopping-basket-line"></i> Your Cart
 
 </div>
 <div class="dropdown-content">

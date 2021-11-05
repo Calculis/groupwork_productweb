@@ -42,7 +42,10 @@ for(const p of products){
     }
     const addBtn=document.createElement("button")
     addBtn.className="add"
-    
+    addBtn.setAttribute(
+        "class",
+        "mt-12 w-full bg-indigo-400 transition duration-200 rounded-md py-3 px-3 flex items-center justify-center text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      );
     addBtn.textContent="Add to cart"
     container.appendChild(addBtn)
     main.appendChild(container)
