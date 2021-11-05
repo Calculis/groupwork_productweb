@@ -1,2 +1,11 @@
 # groupwork_productweb
-เขียน popup dropdown ไว้นะ ถ้าจะเอาอันที่เป็นไอคอนเป็นตัว dropdown เอาชื่อ class ไปใส่แทนในตัวไอคอนนะ
+ที่เสร็จแล้ว
+- nav bar
+- cart
+- reset cart
+
+ที่ยังไม่เสร็จ
+- search
+- แก้font
+- ตกแต่งcart dropdown
+- จัดlayout (optional)
