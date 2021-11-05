@@ -6,6 +6,7 @@ const allChild=main.childNodes
 const resetBtn = document.createElement("button")
 resetBtn.id="reset"
 resetBtn.textContent="Empty Cart"
+resetBtn.setAttribute("class","hover:bg-white px-4 py-2 rounded-xl")
 drop[0].appendChild(resetBtn)
 
 for(let i=0;i<allChild.length;i++){
