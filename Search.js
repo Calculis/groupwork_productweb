@@ -6,8 +6,6 @@ const chilProduct = productList.childNodes;
 
 const reload = document.getElementById("reload");
 
-reload.addEventListener("click", back_to_main);
-
 let searchbt = document.getElementById("Search");
 
 let sbt = document.getElementById("sbt");
@@ -22,6 +20,7 @@ searchbt.addEventListener(
 
 function SearchButton() {
   var inputName = sbt.value;
+  console.log("Test");
   header_txt.textContent = `All Matching Product : ${inputName}`;
   const reg = new RegExp(inputName.toLowerCase());
   console.log(inputName.length == 0);
@@ -46,3 +45,4 @@ const back_to_main = () => {
     chilProduct[i].style.display = "block";
   }
 };
+reload.addEventListener("click", back_to_main);
