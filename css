@@ -2,6 +2,8 @@
 
 body{
     font-family: "Poppins", sans-serif !important;
+    margin: 0; 
+    padding: 0;
 }
 /* html {
     padding: 50px 50px 75px 100px;
@@ -46,3 +48,30 @@ body{
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #ff8e41;}
+
+
+.box{
+  position: relative;
+  left: 25%;  
+  transform: translate(-50%,-50%);
+  padding-bottom: 250px;
+  float: left;
+  transition: 10s ease-out;
+  color: #818cf8;
+}
+.box input{
+  border: rgb(190, 190, 190) solid ;
+  border-radius: 13px 13x;
+}
+.box button{
+  width: 75px;
+  background-color: #818cf8;
+  color: white;
+  border-radius: 13px 13px;
+  transition: ease 0.5s;
+}
+.box button:hover{
+  background-color: rgb(235, 231, 231);
+  color: #000000;
+  border: black solid 0.25px;
+}
