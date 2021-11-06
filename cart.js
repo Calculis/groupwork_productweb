@@ -58,11 +58,16 @@ const resetCart=()=>{
     const confirm_del=confirm("Delete all item in your cart?")
     if(confirm_del){
     cart.length=0
-    const all_item=drop[0].childNodes
-    for(let i=0;i<all_item.length-1;i++){
-        drop[0].firstChild.remove()
+    do{
+        var all_item=document.querySelector(".dropdown-content a")
+        if(all_item==null){
+            break
+        }
+        all_item.remove()
     }
-   
+    while(all_item!=null)
+          
+          
 }
 }
 
