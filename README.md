@@ -10,3 +10,4 @@
 - search
 - แก้font
 - จัดlayout (optional)
+- ปุ่ม reload page ( สร้าง html ปุ่มหรือ text ตั้ง id="reload") -> (reload function เขียนไว้แล้ว)
