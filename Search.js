@@ -1,41 +1,48 @@
-import { products } from "./products.js"
+import { products } from "./products.js";
 
-const productList = document.querySelector('#main');
+const productList = document.querySelector("#main");
 
-// let inputName = productList.filter(Name => Name.name.includes(""));
+const chilProduct = productList.childNodes;
 
-let searchbt = document.getElementById('Search')
-let sbt = document.getElementById('sbt')
+const reload = document.getElementById("reload");
 
-searchbt.addEventListener('click', () =>{
+reload.addEventListener("click", back_to_main);
+
+let searchbt = document.getElementById("Search");
+
+let sbt = document.getElementById("sbt");
+
+searchbt.addEventListener(
+  "click",
+  () => {
     SearchButton();
-    },false)
+  },
+  false
+);
 
-function SearchButton(){
-    var inputName = sbt.value;
-    console.log(inputName.length == 0);
-    let chilProduct = productList.childNodes;
-    if(inputName.length == 0){
-    }else{
-        // for(let a of chilProduct){
-        //     for(let b of inputName){
-        //         if(a.id == b.id){   
-        //             a.style.display = '';
-        //             break;
-        //         }else{
-        //             a.style.display = 'none';
-        //         }
-        //     }
-        // }
-
-        for(let i = 0; chilProduct.length > i; i++){
-            let productName = products[i].name
-            if(productName == inputName){ 
-            }else{
-                let productId = document.getElementById(productName)
-                let productParent = productId.parentNode
-                productParent.style.display = 'none';
-            }
-        }
+function SearchButton() {
+  var inputName = sbt.value;
+  header_txt.textContent = `All Matching Product : ${inputName}`;
+  const reg = new RegExp(inputName.toLowerCase());
+  console.log(inputName.length == 0);
+  if (inputName.length == 0) {
+    alert("Please Reload Pages");
+  } else {
+    for (let i = 0; chilProduct.length > i; i++) {
+      let productName = products[i].name;
+      let productId = document.getElementById(productName);
+      let productParent = productId.parentNode;
+      if (productName.toLowerCase().match(reg) != null) {
+        productParent.style.display = "block";
+      } else {
+        productParent.style.display = "none";
+      }
     }
+  }
 }
+
+const back_to_main = () => {
+  for (let i = 0; chilProduct.length > i; i++) {
+    chilProduct[i].style.display = "block";
+  }
+};
