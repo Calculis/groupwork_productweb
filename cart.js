@@ -8,7 +8,7 @@ resetBtn.id="reset"
 resetBtn.textContent="Empty Cart"
 resetBtn.setAttribute("class","hover:bg-white px-4 py-2 rounded-xl")
 drop[0].appendChild(resetBtn)
-
+export function set_cart_btn(){
 for(let i=0;i<allChild.length;i++){
 
     const id=allChild[i].firstChild.nextSibling.id
@@ -45,7 +45,7 @@ for(let i=0;i<allChild.length;i++){
 
     })
 }
-
+}
 const cart_duplicate=(id)=>{
   for(let i=0;i<cart.length;i++){
       if(cart[i].id==id){

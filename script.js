@@ -1,4 +1,5 @@
 export const main =document.getElementById("main")
+import { set_cart_btn } from "./cart.js"
 import { products } from "./products.js"
 var count=1
 export function load_mainpage(products){
@@ -56,5 +57,6 @@ for(const p of products){
     
     
 }
+    set_cart_btn()
 }
 load_mainpage(products)
