@@ -7,7 +7,7 @@
 - reset cart (นนท์)
 
 ที่ยังไม่เสร็จ
-- search
+- search (เขียนไว้ให้แล้ว ตอนเสิชมา layout หน้าเว็บไม่เท่ากัน ลองไปปรับดู)
 - แก้font
 - จัดlayout (optional)
 - ปุ่ม reload page ( สร้าง html ปุ่มหรือ text ตั้ง id="reload") -> (reload function เขียนไว้แล้ว)
