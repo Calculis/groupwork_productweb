@@ -24,7 +24,7 @@ for(const p of products){
             text.setAttribute("id",p[l])
             // text.textContent= `${l}:${p[l]}`
             text.textContent= `${p[l]}`
-            text.setAttribute("class","bg-white text-xl text-center text-indigo-500 rounded-t-xl hover:text-white hover:bg-indigo-300 pt-2 pb-2 px-4")
+            text.setAttribute("class","font-semibold bg-white text-xl text-center text-indigo-500 rounded-t-xl hover:text-white hover:bg-indigo-300 pt-2 pb-2 px-4")
             container.appendChild(text)
 
         }
@@ -36,15 +36,32 @@ for(const p of products){
             container.appendChild(text)
 
         }
+        else if(l=="price"){
+            const text = document.createElement("p")
+            text.setAttribute("id",p[l])
+            text.textContent= `${p[l]} THB`
+            text.setAttribute("class","text-center bg-white hover:text-white hover:bg-indigo-300 px-4")
+            container.appendChild(text)
+        }
+        else if(l=="quantity"){
+            const text = document.createElement("p")
+            text.setAttribute("id",p[l])
+            text.textContent= `Quantity (${p[l]})`
+            text.setAttribute("class","text-center bg-white hover:text-white hover:bg-indigo-300 px-4")
+            container.appendChild(text)
+        }
+        else if(l=="desc"){
+            const text = document.createElement("p")
+            text.setAttribute("id",p[l])
+            text.textContent= `${p[l]}`
+            text.setAttribute("class","text-center bg-white rounded-b-xl hover:text-white hover:bg-indigo-300 pb-2 px-4")
+            container.appendChild(text)
+        }
         else{
-        //price quan desc
         const text = document.createElement("p")
-        text.setAttribute("class","text-center bg-white rounded-b-xl hover:text-white hover:bg-indigo-300 px-4")
+        text.setAttribute("class","text-center bg-white hover:text-white hover:bg-indigo-300 px-4")
         text.textContent= `${l}:${p[l]}`
-        // text.textContent= `${p[l]}`
         container.appendChild(text)
-        // const text= 
-        // console.log(text);
     }
    
     }
