@@ -2,7 +2,7 @@
 const addBtn=document.getElementsByClassName("add")
 const drop=document.getElementsByClassName("dropdown-content")
 const cart=[]
-const allChild=main.childNodes
+export const allChild=main.childNodes
 const resetBtn = document.createElement("button")
 resetBtn.id="reset"
 resetBtn.textContent="Empty Cart"

@@ -1,6 +1,7 @@
-const main =document.getElementById("main")
+export const main =document.getElementById("main")
 import { products } from "./products.js"
 var count=1
+export function load_mainpage(products){
 for(const p of products){
     
     const container=document.createElement("div")
@@ -55,3 +56,5 @@ for(const p of products){
     
     
 }
+}
+load_mainpage(products)
