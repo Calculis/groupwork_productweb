@@ -52,11 +52,10 @@ body{
 
 .box{
   position: relative;
-  left: 25%;  
+  left: 35%;  
   transform: translate(-50%,-50%);
   padding-bottom: 250px;
   float: left;
-  transition: 10s ease-out;
   color: #818cf8;
 }
 .box input{
@@ -68,7 +67,7 @@ body{
   background-color: #818cf8;
   color: white;
   border-radius: 13px 13px;
-  transition: ease 0.5s;
+  transition: ease 0.3s;
 }
 .box button:hover{
   background-color: rgb(235, 231, 231);
