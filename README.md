@@ -10,8 +10,8 @@
 - Search (บิ๊ก)
 - ทำปุ่ม Search ไปนิดหน่อย (css)
 - ทำปุ่ม Reload ใหม่แย้ว
+- ปรับขนาดช่องเสิช หรือใส่ hover (optional) 
+- ปรับ placeholder,font 
 
 ที่ยังไม่เสร็จ
 
-- ปรับขนาดช่องเสิช หรือใส่ hover (optional) 
-- ปรับ placeholder,font 
