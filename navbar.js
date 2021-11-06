@@ -5,7 +5,7 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
 <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <div style="font-size: 24px;" class="ri-game-fill mr-5"></div>
    
-    <div class="mr-5">Group 4's Gamimg Gear Shop</div>
+    <a href="/" class="mr-5">Group 4's Gamimg Gear Shop</a>
     <div class="md:ml-auto flex flex-wrap items-center text-base justify-center">
    
 <div class="dropdown">
