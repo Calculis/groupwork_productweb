@@ -2,6 +2,7 @@ export const main =document.getElementById("main")
 import { set_cart_btn } from "./cart.js"
 import { products } from "./products.js"
 var count=1
+export const header_txt=document.getElementById("header_txt");
 export function load_mainpage(products){
 for(const p of products){
     
@@ -58,5 +59,7 @@ for(const p of products){
     
 }
     set_cart_btn()
+    header_txt.textContent="All Product"
+
 }
 load_mainpage(products)
