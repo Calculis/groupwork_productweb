@@ -11,3 +11,6 @@
 - แก้font
 - จัดlayout (optional)
 - ปุ่ม reload page ( สร้าง html ปุ่มหรือ text ตั้ง id="reload") -> (reload function เขียนไว้แล้ว)
+- ปุ่ม search , search-bar เติม CSS ,หาที่วาง (สร้างใหม่เลยก็ได้ตั้ง class,id ให้เหมือนเดิมพอ)
+- ปรับขนาดช่องเสิช หรือใส่ hover (optional) 
+- ปรับ placeholder,font 
