@@ -10,6 +10,10 @@ let searchbt = document.getElementById("Search");
 
 let sbt = document.getElementById("sbt");
 
+const search_toggle=document.getElementById("Search_toggle") // search click to expand
+
+const search_tab= document.getElementById("search_div"); // search input
+
 searchbt.addEventListener(
   "click",
   () => {
@@ -46,3 +50,14 @@ const back_to_main = () => {
   }
 };
 reload.addEventListener("click", back_to_main);
+
+
+const toggle_bar=()=>{
+  search_toggle.style.display='none'
+  search_tab.style.display="block"
+
+
+
+}
+
+search_toggle.addEventListener("click",toggle_bar)

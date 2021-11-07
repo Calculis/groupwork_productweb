@@ -1,5 +1,6 @@
 const searchBtn=document.getElementById("searchBtn") // button
 const search_txt=document.getElementById("search_txt") // input txt
+
 import { header_txt } from "./script.js"
 import { products } from "./products.js"
 import { load_mainpage, main } from "./script.js"
@@ -60,3 +61,4 @@ const back_to_main=()=>{
 }
 const reload=document.getElementById("reload")
 reload.addEventListener("click",back_to_main)
+
