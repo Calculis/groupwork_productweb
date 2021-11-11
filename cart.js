@@ -8,9 +8,9 @@ resetBtn.id="reset"
 resetBtn.textContent="Empty Cart"
 resetBtn.setAttribute("class","hover:bg-white px-4 py-2 rounded-xl")
 drop[0].appendChild(resetBtn)
+let cartAmount = document.querySelector('#allProductInCart');
 export function set_cart_btn(){
 for(let i=0;i<allChild.length;i++){
-
     const id=allChild[i].firstChild.nextSibling.id
     const bt=allChild[i].lastChild;
     bt.addEventListener("click",()=>{
@@ -34,18 +34,22 @@ for(let i=0;i<allChild.length;i++){
                 if(target.id==no_ch[k].id){
                     no_ch[k].textContent=`id:${no_ch[k].id} Name:${target.name} quantity:${target.quantity}`
                 }
-                    
-                
             }
-            
-            
-           
-
         }
-
+        cartAmount.textContent = countProduct();
     })
 }
 }
+
+//Count Product In Cart
+function countProduct() {
+    var total = 0;
+        for (let i = 0; i < cart.length; i++) {
+            total += cart[i].quantity;
+        }
+    return total;
+}
+
 const cart_duplicate=(id)=>{
   for(let i=0;i<cart.length;i++){
       if(cart[i].id==id){
@@ -66,11 +70,9 @@ const resetCart=()=>{
         all_item.remove()
     }
     while(all_item!=null)
-          
-          
 }
+cartAmount.textContent = countProduct.length;
 }
-
 resetBtn.addEventListener("click",resetCart)
 
 
