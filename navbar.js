@@ -7,7 +7,12 @@ navElem.innerHTML = `<div class="bg-white shadow fixed z-50 w-full">
     <a href="/" class="mr-5">Group 4's Gaming Gear Shop</a>
     <div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> 
     
-    <span id="history"><button><a id="history_link" >History</a></button></span> 
+    <span id="history">
+        <button>
+            <a id="history_link" class="mr-4 hover:text-indigo-400">History</a>
+        </button>
+    </span>
+
         <div class="dropdown">
         
             <div class="text-indigo-300 hover:text-white border-2 border-indigo-300 hover:bg-indigo-300 rounded-full transition duration-200 mx-auto px-4 py-2">

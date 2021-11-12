@@ -25,9 +25,9 @@ function loadEmptyTable(){
     else{
     var content= `<div>
     <table>
-    <tr>
-    <th>History</th>
-    <th>Date</th>
+    <tr class="font-medium text-left">
+      <th class="px-4 py-2 bg-white rounded-l-lg">History</th>
+      <th class="px-4 py-2 bg-white rounded-r-lg">Date</th>
     </tr>
    `
    
