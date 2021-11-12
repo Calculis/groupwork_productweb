@@ -1,7 +1,7 @@
 const header=document.getElementById("header_txt")
 const main= document.getElementById("main")
 const link=document.getElementById("history_link")
-const clear=document.getElementById("clear")
+
 function historyPage(){
     var content=loadEmptyTable()
     
@@ -10,8 +10,10 @@ function historyPage(){
     search_bar.style.display="none"
     toggle.style.display="none"
     header.textContent="Your History"
-    main.innerHTML=content
+    main.innerHTML=content 
+    const clear=document.getElementById("clear")
     clear.addEventListener("click",clearHistory)
+   
    
 }
 function loadEmptyTable(){
@@ -20,7 +22,7 @@ function loadEmptyTable(){
         content="No History"
     }
     else{
-    var content= `
+    var content= `<div>
     <table>
     <tr>
     <th>History</th>
@@ -35,7 +37,7 @@ function loadEmptyTable(){
         </tr>`
     }
 }
-    content+=`</table>
+    content+=`</table></div><br>
     <button id="clear"> clear history</button>
     `
     
@@ -49,7 +51,7 @@ function loadLocalStorage(){
 }
 function clearHistory(){
     localStorage.clear()
-    loadEmptyTable()
+    historyPage()
 }
 link.addEventListener("click",historyPage)
 
