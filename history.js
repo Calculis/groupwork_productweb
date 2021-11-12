@@ -30,37 +30,33 @@ function loadEmptyTable(){
         content="No History"
     }
     else{
-    var content= `<div class="w-10/12 ml-16 ">
-    <table class="overflow-x-auto flex item-center  ">
-    <tr class="font-medium text-left">
-      <th class="px-4 py-2 bg-white rounded-l-lg text-xl">History</th>
-      <th class="px-4 py-2 bg-white rounded-r-lg text-xl">Date</th>
-    </tr>
-   `
-    var sty=true
+    var content= `<div>
+    <table class="table-auto border-collapse w-full">
+        <tr class="border-b border-gray-200 font-medium py-10">
+            <td class="pt-8 px-44 py-4 text-lg">History</td>
+            <td class="text-lg px-56 py-4">Date</td>
+        </tr>`
+   
     for(let i=0;i<storage.length/2;i++){
-        if(sty){
-        content+=`<tr> 
-        <td class="px-4 py-2 bg-gray-200 rounded-l-lg">${localStorage.getItem('item'+i)} </td>
-        <td class="px-4 py-2 bg-gray-200 rounded-l-lg">${localStorage.getItem('date'+i)} </td>
+        content+=`<tr class="hover:bg-white"> 
+        <td class="pt-8 px-44 py-4">${localStorage.getItem('item'+i)} </td>
+        <td class="pt-8 px-44 py-4">${localStorage.getItem('date'+i)} </td>
+        <td class="pt-8 px-44 py-4">
+        <button id="clear" class="ri-delete-bin-line items-center justify-center w-8 h-8 transition-colors duration-150 rounded-full focus:shadow-outline border border-gray-50 shadow-lg bg-white hover:bg-red-400 hover:text-white hover:border-transparent" style="font-size: 18px;">
+        </button>
+        </td>
         </tr>`
         sty=false
     }
-    else{
-        content+=`<tr> 
-        <td class="px-4 py-2 bg-white rounded-l-lg">${localStorage.getItem('item'+i)} </td>
-        <td class="px-4 py-2 bg-white rounded-l-lg">${localStorage.getItem('date'+i)} </td>
-        </tr>`
-     sty=true
-    }
+   
 }
-    content+=`</table><button id="clear" class=" my-4 px-2 py-2 w-auto text-2xl bg-red-200 hover:bg-red-300 rounded-l-lg"> clear history</button>
-    </div><br>
-    `
+    // content+=`</table></div><br>
+    // <button id="clear"> clear history</button>
+    // `
     
     return content
 }
-}
+
 
 
 function loadLocalStorage(){
