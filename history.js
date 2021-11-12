@@ -35,6 +35,8 @@ function loadEmptyTable(){
         <tr class="border-b border-gray-200 font-medium py-10">
             <td class="pt-8 px-44 py-4 text-lg">History</td>
             <td class="text-lg px-56 py-4">Date</td>
+            <td><button id="clear" class="ri-delete-bin-line items-center justify-center w-8 h-8 transition-colors duration-150 rounded-full focus:shadow-outline border border-gray-50 shadow-lg bg-white hover:bg-red-400 hover:text-white hover:border-transparent" style="font-size: 18px;"></td>
+     
         </tr>`
    
     for(let i=0;i<storage.length/2;i++){
@@ -42,8 +44,7 @@ function loadEmptyTable(){
         <td class="pt-8 px-44 py-4">${localStorage.getItem('item'+i)} </td>
         <td class="pt-8 px-44 py-4">${localStorage.getItem('date'+i)} </td>
         <td class="pt-8 px-44 py-4">
-        <button id="clear" class="ri-delete-bin-line items-center justify-center w-8 h-8 transition-colors duration-150 rounded-full focus:shadow-outline border border-gray-50 shadow-lg bg-white hover:bg-red-400 hover:text-white hover:border-transparent" style="font-size: 18px;">
-        </button>
+           </button>
         </td>
         </tr>`
        
