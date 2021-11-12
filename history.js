@@ -46,7 +46,7 @@ function loadEmptyTable(){
         </button>
         </td>
         </tr>`
-        sty=false
+       
     }
    
 }
