@@ -42,6 +42,7 @@ function SearchButton() {
       }
     }
   }
+  
 }
 
 const back_to_main = () => {

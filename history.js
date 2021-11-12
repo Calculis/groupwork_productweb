@@ -13,6 +13,7 @@ function historyPage(){
     main.innerHTML=content 
     const clear=document.getElementById("clear")
     clear.addEventListener("click",clearHistory)
+    
    
    
 }
@@ -51,6 +52,7 @@ function loadLocalStorage(){
 }
 function clearHistory(){
     localStorage.clear()
+    count=0
     historyPage()
 }
 link.addEventListener("click",historyPage)
