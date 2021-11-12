@@ -30,24 +30,27 @@ function loadEmptyTable(){
         content="No History"
     }
     else{
-    var content= `<div >
-    <table class="overflow-x-auto">
-    <tr class="font-medium text-left">
-      <th class="px-4 py-2 bg-white rounded-l-lg">History</th>
-      <th class="px-4 py-2 bg-white rounded-r-lg">Date</th>
-    </tr>
-   `
+    var content= `<div>
+    <table class="table-auto border-collapse w-full">
+        <tr class="border-b border-gray-200 font-medium py-10">
+            <td class="pt-8 px-44 py-4 text-lg">History</td>
+            <td class="text-lg px-56 py-4">Date</td>
+        </tr>`
    
     for(let i=0;i<storage.length/2;i++){
-        content+=`<tr  "> 
-        <td>${localStorage.getItem('item'+i)} </td>
-        <td>${localStorage.getItem('date'+i)} </td>
+        content+=`<tr class="hover:bg-white"> 
+        <td class="pt-8 px-44 py-4">${localStorage.getItem('item'+i)} </td>
+        <td class="pt-8 px-44 py-4">${localStorage.getItem('date'+i)} </td>
+        <td class="pt-8 px-44 py-4">
+        <button id="clear" class="ri-delete-bin-line items-center justify-center w-8 h-8 transition-colors duration-150 rounded-full focus:shadow-outline border border-gray-50 shadow-lg bg-white hover:bg-red-400 hover:text-white hover:border-transparent" style="font-size: 18px;">
+        </button>
+        </td>
         </tr>`
     }
 }
-    content+=`</table></div><br>
-    <button id="clear"> clear history</button>
-    `
+    // content+=`</table></div><br>
+    // <button id="clear"> clear history</button>
+    // `
     
     return content
 }
