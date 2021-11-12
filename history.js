@@ -13,9 +13,16 @@ function historyPage(){
     main.innerHTML=content 
     const clear=document.getElementById("clear")
     clear.addEventListener("click",clearHistory)
+}
+function clearHistory(){
+    const conf=confirm("Delete all history ?")
+    if(conf){
+    localStorage.clear()
+    historyPage()
+  
+    }
     
-   
-   
+    
 }
 function loadEmptyTable(){
     let storage=loadLocalStorage()
@@ -23,8 +30,8 @@ function loadEmptyTable(){
         content="No History"
     }
     else{
-    var content= `<div>
-    <table>
+    var content= `<div >
+    <table class="overflow-x-auto">
     <tr class="font-medium text-left">
       <th class="px-4 py-2 bg-white rounded-l-lg">History</th>
       <th class="px-4 py-2 bg-white rounded-r-lg">Date</th>
@@ -32,7 +39,7 @@ function loadEmptyTable(){
    `
    
     for(let i=0;i<storage.length/2;i++){
-        content+=`<tr> 
+        content+=`<tr  "> 
         <td>${localStorage.getItem('item'+i)} </td>
         <td>${localStorage.getItem('date'+i)} </td>
         </tr>`
@@ -50,10 +57,6 @@ function loadLocalStorage(){
     let keys=Object.keys(localStorage)
     return keys
 }
-function clearHistory(){
-    localStorage.clear()
-    count=0
-    historyPage()
-}
+
 link.addEventListener("click",historyPage)
 
