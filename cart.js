@@ -1,7 +1,7 @@
 // set add to cart button
 const addBtn=document.getElementsByClassName("add")
 const drop=document.getElementsByClassName("dropdown-content")
-const cart=[]
+export const cart=[]
 export const allChild=main.childNodes
 const resetBtn = document.createElement("button")
 resetBtn.id="reset"
@@ -37,6 +37,7 @@ for(let i=0;i<allChild.length;i++){
             }
         }
         cartAmount.textContent = countProduct();
+        console.log(cart);
     })
 }
 }
