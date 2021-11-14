@@ -1,3 +1,4 @@
+import { CookieUtil } from "./cookie.js"
 import { products } from "./products.js"
 
 // set add to cart button
@@ -33,7 +34,7 @@ for(let i=0;i<allChild.length;i++){
             // let menu=addToList(id)
             drop[0].insertBefore(menu,drop[0].firstChild);
             
-            
+            CookieUtil.set(`${choose_item.name}`, cart.length, Date(60*60*24));
             // console.log(drop[0]);
          
         }
@@ -67,6 +68,7 @@ function countProduct() {
     var total = 0;
         for (let i = 0; i < cart.length; i++) {
             total += cart[i].quantity;
+            CookieUtil.set("Total",total)
         }
     return total;
 }
@@ -89,6 +91,7 @@ const resetCart=()=>{
             break
         }
         all_item.remove()
+        CookieUtil.clearCartCookies()
     }
     while(all_item!=null)
 }
