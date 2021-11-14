@@ -1,6 +1,8 @@
+import { products } from "./products.js"
+
 // set add to cart button
 const addBtn=document.getElementsByClassName("add")
-const drop=document.getElementsByClassName("dropdown-content")
+export const drop=document.getElementsByClassName("dropdown-content")
 export const cart=[]
 export const allChild=main.childNodes
 const resetBtn = document.createElement("button")
@@ -9,17 +11,26 @@ resetBtn.textContent="Empty Cart"
 resetBtn.setAttribute("class","hover:bg-white px-4 py-2 rounded-xl")
 drop[0].appendChild(resetBtn)
 let cartAmount = document.querySelector('#allProductInCart');
+
+export function getObjbyId(id){
+    products.find(item=>
+        item.id==id
+    )
+}
 export function set_cart_btn(){
 for(let i=0;i<allChild.length;i++){
     const id=allChild[i].firstChild.nextSibling.id
     const bt=allChild[i].lastChild;
     bt.addEventListener("click",()=>{
         if(cart_duplicate(id)==false){
+    //         const choose_item= {"id":id,name:document.getElementById(id).nextSibling.id,quantity:1}
+    // cart.unshift(choose_item)
            const choose_item= {"id":id,name:document.getElementById(id).nextSibling.id,quantity:1}
             cart.unshift(choose_item)
             const menu=document.createElement("a")
             menu.id= id
             menu.textContent= `id:${choose_item.id} Name:${choose_item.name} quantity:1`
+            // let menu=addToList(id)
             drop[0].insertBefore(menu,drop[0].firstChild);
             
             
@@ -41,7 +52,16 @@ for(let i=0;i<allChild.length;i++){
     })
 }
 }
+// create tag for dropdown
+export function addToList(obj,qty=1){
+    
+    const menu=document.createElement("a")
+    menu.id= obj
 
+    menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty==1?1:qty}`
+    return menu
+
+}
 //Count Product In Cart
 function countProduct() {
     var total = 0;
@@ -72,6 +92,7 @@ const resetCart=()=>{
     }
     while(all_item!=null)
 }
+
 cartAmount.textContent = countProduct.length;
 }
 resetBtn.addEventListener("click",resetCart)
