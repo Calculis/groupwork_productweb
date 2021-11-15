@@ -18,7 +18,7 @@ function synchornizeCart(){
             
         })
     }
-    up
+    
 
 }
 window.addEventListener('load',
