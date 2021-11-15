@@ -1,49 +1,29 @@
 import {cart} from "./cart.js"
 import { products } from "./products.js"
-import { addToList,drop } from "./cart.js"
-// const items=cart
-// function setCookie(){
-//     let count=1
-//     clearCartCookies()
-// for (const iterator of items) {
-    
-//     const txt= (`${encodeURIComponent('item'+count)}=${iterator.id}|${iterator.quantity};max-age=${60*60*24}`)
-//     document.cookie=txt
-//     count++
-// }
+import { addToList,drop,updateAmount} from "./cart.js"
 
-//     }
-   
-// function synchornizeCart(){
-//     const cookies=document.cookie.split(";") //แยก cookie 
-    
-//     // console.log(cookies.length!=1);
-//     if(cookies.length!=1){
-//     cookies.forEach(item=>{
-//         const sValue=item.indexOf("=") // indexเริ่มต้นของ value
-//         item=item.substring(sValue+1,item.length)
-//         const set=item.split("|")
-//         const id=set[0]
-//         const qty=set[1]
-//         const c =products.find(item=> item["id"]==id)
-//         const name=c["name"]
-//         // console.log(id);
-//         // console.log(qty);
-//         // console.log(name);
-//        let menu= addToList(c,qty)
-//         drop[0].insertBefore(menu,drop[0].firstChild);
+
+function synchornizeCart(){
+    let cookies=document.cookie
+    if(cookies.length>1){
+        const cookie_arr=cookies.split(";")
         
-//     })
-// }
-//     // console.log(document.cookie);
+        cookie_arr.forEach(cookie=>{
+            cookie=decodeURIComponent(cookie)
+            const name=cookie.substring(0,cookie.indexOf('='))
+            const val=parseInt(cookie.substring(cookie.indexOf('=')+1,cookie.length))
+            const prod=products.find(x=> x.name.trim()==name.trim())
+            addToList(prod,val)
+            updateAmount()
+            
+        })
+    }
+    up
 
-// }
-
-
-
-// window.onbeforeunload=setCookie
-// window.onload=synchornizeCart
-
+}
+window.addEventListener('load',
+    synchornizeCart
+)
 
 export class CookieUtil {
     static get(name) {
@@ -85,4 +65,3 @@ export class CookieUtil {
         })
     }
   }
-  

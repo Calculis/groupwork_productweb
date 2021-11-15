@@ -11,7 +11,7 @@ resetBtn.id="reset"
 resetBtn.textContent="Empty Cart"
 resetBtn.setAttribute("class","hover:bg-white px-4 py-2 rounded-xl")
 drop[0].appendChild(resetBtn)
-let cartAmount = document.querySelector('#allProductInCart');
+export let cartAmount = document.querySelector('#allProductInCart');
 
 export function getObjbyId(id){
     products.find(item=>
@@ -34,42 +34,48 @@ for(let i=0;i<allChild.length;i++){
             // let menu=addToList(id)
             drop[0].insertBefore(menu,drop[0].firstChild);
             
-            CookieUtil.set(`${choose_item.name}`, cart.length, Date(60*60*24));
+            CookieUtil.set(`${choose_item.name}`, 1, Date(60*60*24));
             // console.log(drop[0]);
          
         }
         else{
            const target= cart.find( item=> item["id"]==id )
            target["quantity"]+=1
+           CookieUtil.set(`${target.name}`,target.quantity, Date(60*60*24));
            const no_ch=drop[0].childNodes
             for(let k=0;k<no_ch.length;k++){
                 if(target.id==no_ch[k].id){
                     no_ch[k].textContent=`id:${no_ch[k].id} Name:${target.name} quantity:${target.quantity}`
                 }
             }
+             
         }
-        cartAmount.textContent = countProduct();
+        updateAmount()
         console.log(cart);
     })
 }
 }
 // create tag for dropdown
-export function addToList(obj,qty=1){
-    
+export function addToList(obj,qty=1){ 
     const menu=document.createElement("a")
-    menu.id= obj
+    if(obj.id!=null){
+    menu.id= obj.id
+    menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
+    drop[0].insertBefore(menu,drop[0].firstChild);
+    cart.unshift({id:obj.id,name:obj.name,quantity:qty})
 
-    menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty==1?1:qty}`
-    return menu
-
+    }
+}
+export function updateAmount(){
+    cartAmount.textContent = countProduct();
 }
 //Count Product In Cart
 function countProduct() {
     var total = 0;
         for (let i = 0; i < cart.length; i++) {
             total += cart[i].quantity;
-            CookieUtil.set("Total",total)
         }
+        // CookieUtil.set("Total",total)
     return total;
 }
 
