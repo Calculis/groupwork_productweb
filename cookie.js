@@ -1,7 +1,7 @@
 import {cart} from "./cart.js"
 import { products } from "./products.js"
 import { addToList,drop,updateAmount} from "./cart.js"
-
+document.cookie="user=user;max-age=84000"
 
 function synchornizeCart(){
     let cookies=document.cookie
@@ -13,9 +13,10 @@ function synchornizeCart(){
             const name=cookie.substring(0,cookie.indexOf('='))
             const val=parseInt(cookie.substring(cookie.indexOf('=')+1,cookie.length))
             const prod=products.find(x=> x.name.trim()==name.trim())
+            if(prod!=null) {
             addToList(prod,val)
             updateAmount()
-            
+            }
         })
     }
     
