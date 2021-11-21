@@ -14,57 +14,58 @@ drop[0].appendChild(resetBtn)
 export let cartAmount = document.querySelector('#allProductInCart');
 
 export function getObjbyId(id){
-    products.find(item=>
+    return products.find(item=>
         item.id==id
     )
+    
 }
-export function set_cart_btn(){
-for(let i=0;i<allChild.length;i++){
-    const id=allChild[i].firstChild.nextSibling.id
-    const bt=allChild[i].lastChild;
-    bt.addEventListener("click",()=>{
-        if(cart_duplicate(id)==false){
-    //         const choose_item= {"id":id,name:document.getElementById(id).nextSibling.id,quantity:1}
-    // cart.unshift(choose_item)
-           const choose_item= {"id":id,name:document.getElementById(id).nextSibling.id,quantity:1}
-            cart.unshift(choose_item)
-            const menu=document.createElement("a")
-            menu.id= id
-            menu.textContent= `id:${choose_item.id} Name:${choose_item.name} quantity:1`
-            // let menu=addToList(id)
-            drop[0].insertBefore(menu,drop[0].firstChild);
-            
-            CookieUtil.set(`${choose_item.name}`, 1, Date(60*60*24));
-            // console.log(drop[0]);
-         
-        }
-        else{
-           const target= cart.find( item=> item["id"]==id )
-           target["quantity"]+=1
-           CookieUtil.set(`${target.name}`,target.quantity, Date(60*60*24));
-           const no_ch=drop[0].childNodes
-            for(let k=0;k<no_ch.length;k++){
-                if(target.id==no_ch[k].id){
-                    no_ch[k].textContent=`id:${no_ch[k].id} Name:${target.name} quantity:${target.quantity}`
-                }
+  
+
+export function set_add_btn(){
+   
+    for(let i=1;i<products.length+1;i++){
+        const product_page=document.getElementById(`product${i}`)
+        const product_id=product_page.firstChild.nextSibling.id
+        const button=product_page.querySelector("button")
+        button.addEventListener("click",()=>{
+            if(!cart_duplicate(product_id)){
+            addToList(getObjbyId(product_id))}
+            else{
+                setItemInCart(product_id)
             }
-             
-        }
-        updateAmount()
-        console.log(cart);
-    })
-}
+            
+        })
+    }
 }
 // create tag for dropdown
+function setItemInCart(id){
+    const item=findItemInCart(id)
+    item.quantity+=1
+    setDropDownQty(id,item.quantity)
+}
+function setDropDownQty(id,qty){
+    const dropdown_item=document.getElementById(`dropdown_item${id}`)
+    if(dropdown_item==null) return
+    const obj=findItemInCart(id)
+    dropdown_item.textContent=`id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
+    updateAmount()
+}
 export function addToList(obj,qty=1){ 
-    const menu=document.createElement("a")
+    // const menu=document.createElement("a")
     if(obj.id!=null){
-    menu.id= obj.id
+    // menu.id= obj.id
+    // menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
+    // drop[0].insertBefore(menu,drop[0].firstChild);
+    cart.unshift({id:obj.id,name:obj.name,quantity:qty})
+    addToDropDown(obj,qty)
+    }
+}
+function addToDropDown(obj,qty){
+    const menu=document.createElement("a")
+    menu.id= `dropdown_item${obj.id}`
     menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
     drop[0].insertBefore(menu,drop[0].firstChild);
-    cart.unshift({id:obj.id,name:obj.name,quantity:qty})
-
-    }
+    updateAmount()
 }
 export function updateAmount(){
     cartAmount.textContent = countProduct();
@@ -86,6 +87,9 @@ const cart_duplicate=(id)=>{
       }
   }
   return false
+}
+const findItemInCart=(id)=>{
+    return cart.find(item=> item.id==id )
 }
 const resetCart=()=>{
     const confirm_del=confirm("Delete all item in your cart?")
