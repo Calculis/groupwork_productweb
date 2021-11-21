@@ -19,7 +19,21 @@ export function getObjbyId(id){
     )
     
 }
-  
+ // flow การทำงาน ที่แก้ไข
+ // 1. set_add_btn() จะถูกเรียกใช้ตอนโหลดหน้าเว็บหลักมา 
+ // หน้าที่ของ function นี้คือ ไป set event ให้ปุ่ม add to cart ให้เวลากดแล้วจะเกิด event บางอย่าง
+
+ // 2. เมื่อปุ่มถูกกดจะเกิดการทำงานได้ 2 กรณี
+ //   1) ถ้ากดแล้วเพิ่มของที่ไม่มีใน cart (เช็คโดยการใช้ function cart_duplicate) 
+ //      ให้ไปเรียก ฟังก์ชัน addToCart ทำหน้าที่รับ object มาหากไม่เป็น  null ก็จะเพิ่มเข้า cart
+ //      และไปเรียก addToDropDown ต่อ โดยมันจะไปสร้าง link ใน drowdrop เพิ่มโดยมี quantity=1
+ //      และสร้างคุ้กกี้ และก็เรียกใช้ updateAmount คือการอัพเดทให้เลขจำนวนของตรงกับจำนวนในตะกร้า
+ //    
+ //   2) ถ้ากดแล้วของซำ้กับใน cart จะไปเรียกใช้ function setItemInCart แทน โดยมีหน้าที่
+ //      รับ id ไปแล้วไปทำ mapping กับข้อมูลในตะกร้า แล้วแก้ไขให้ quantity เพิ่มขึ้น 1
+ //      แล้วเรียกใช้ function setDropDownQty โดยรับ id ของสินค้ามา แล้วนำไป map กับ link dropdown
+ //      แล้วแก้ไข textcontent ให้ quantity ตรงกับในตะกร้า  และ set cookie และ เรียกใช้
+//       update Amount เพื่ออัพเดทให้ตัวเลขที่แสดงตรงกับจำนวนใน cart 
 
 export function set_add_btn(){
    
@@ -33,7 +47,7 @@ export function set_add_btn(){
             else{
                 setItemInCart(product_id)
             }
-            
+            // console.log(getObjbyId(product_id));
         })
     }
 }
@@ -48,6 +62,7 @@ function setDropDownQty(id,qty){
     if(dropdown_item==null) return
     const obj=findItemInCart(id)
     dropdown_item.textContent=`id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
+    CookieUtil.set(`${obj.name}`,obj.quantity, Date(60*60*24));
     updateAmount()
 }
 export function addToList(obj,qty=1){ 
@@ -65,6 +80,7 @@ function addToDropDown(obj,qty){
     menu.id= `dropdown_item${obj.id}`
     menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
     drop[0].insertBefore(menu,drop[0].firstChild);
+    CookieUtil.set(`${obj.name}`,qty, Date(60*60*24));
     updateAmount()
 }
 export function updateAmount(){
