@@ -1,7 +1,5 @@
-import {cart} from "./cart.js"
 import { products } from "./products.js"
-import { addToList,drop,updateAmount} from "./cart.js"
-document.cookie="user=user;max-age=84000"
+import { addToList,updateAmount} from "./cart.js"
 
 function synchornizeCart(){
     let cookies=document.cookie
@@ -47,7 +45,6 @@ export class CookieUtil {
       let cookieText = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
       if (expires instanceof Date) {
         cookieText += `; expires=${expires.toUTCString()}`;
-        // cookieText += `; expires=${expires}`;
       }
       document.cookie = cookieText;
     }

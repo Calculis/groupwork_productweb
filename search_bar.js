@@ -1,12 +1,12 @@
 const searchBtn=document.getElementById("searchBtn") // button
 const search_txt=document.getElementById("search_txt") // input txt
 
-import { header_txt } from "./script.js"
+import { header_txt } from "./productList.js"
 import { products } from "./products.js"
-import { load_mainpage, main } from "./script.js"
+import { load_mainpage, main } from "./productList.js"
+
 const get_product=()=>{
     const product_txt=search_txt.value
-    // console.log(product_txt);
     return product_txt;
 }
 const search_product=()=>{

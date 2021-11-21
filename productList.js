@@ -1,5 +1,7 @@
 export const main =document.getElementById("main")
+
 // import { set_cart_btn } from "./cart.js"
+
 import {set_add_btn} from "./cart.js"
 import { products } from "./products.js"
 var count=1
@@ -16,14 +18,12 @@ for(const p of products){
         const img=document.createElement("img")
         img.setAttribute("src",p[l])
         img.setAttribute("class","h-56 w-full rounded-xl mb-4 object-cover mb-4 shadow-lg transform hover:-translate-y-1 cursor-pointer transition duration-500 hover:shadow-2xl")
-        // img.setAttribute("width","300px")
-        // img.setAttribute("height","250px")
+       
         container.insertBefore(img,container.childNodes[0])
         }
         else if(l == "name"){
             const text = document.createElement("p")
             text.setAttribute("id",p[l])
-            // text.textContent= `${l}:${p[l]}`
             text.textContent= `${p[l]}`
             text.setAttribute("class","font-semibold bg-white text-xl text-center text-indigo-500 rounded-t-xl hover:text-white hover:bg-indigo-300 pt-2 pb-2 px-4")
             container.appendChild(text)
@@ -32,7 +32,6 @@ for(const p of products){
         else if(l == "id"){
             const text = document.createElement("p")
             text.setAttribute("id",p[l])
-            // text.textContent= `${l}:${p[l]}`
             text.setAttribute("class","hover:text-white hover:bg-indigo-300 px-4")
             container.appendChild(text)
 

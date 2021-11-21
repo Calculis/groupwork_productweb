@@ -1,6 +1,6 @@
 const searchbt=document.getElementById("Search")
 var count=localStorage.length/2
-// let sbt = document.getElementById("sbt");
+
 function keepHistory(){
     const inputName = sbt.value;
     sbt.value=""

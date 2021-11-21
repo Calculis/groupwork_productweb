@@ -20,10 +20,12 @@ export function getObjbyId(id){
     
 }
  // flow การทำงาน ที่แก้ไข
+
  // 1. set_add_btn() จะถูกเรียกใช้ตอนโหลดหน้าเว็บหลักมา 
  // หน้าที่ของ function นี้คือ ไป set event ให้ปุ่ม add to cart ให้เวลากดแล้วจะเกิด event บางอย่าง
 
  // 2. เมื่อปุ่มถูกกดจะเกิดการทำงานได้ 2 กรณี
+
  //   1) ถ้ากดแล้วเพิ่มของที่ไม่มีใน cart (เช็คโดยการใช้ function cart_duplicate) 
  //      ให้ไปเรียก ฟังก์ชัน addToCart ทำหน้าที่รับ object มาหากไม่เป็น  null ก็จะเพิ่มเข้า cart
  //      และไปเรียก addToDropDown ต่อ โดยมันจะไปสร้าง link ใน drowdrop เพิ่มโดยมี quantity=1
@@ -47,7 +49,6 @@ export function set_add_btn(){
             else{
                 setItemInCart(product_id)
             }
-            // console.log(getObjbyId(product_id));
         })
     }
 }
@@ -66,11 +67,7 @@ function setDropDownQty(id,qty){
     updateAmount()
 }
 export function addToList(obj,qty=1){ 
-    // const menu=document.createElement("a")
     if(obj.id!=null){
-    // menu.id= obj.id
-    // menu.textContent= `id:${obj["id"]} Name:${obj["name"]} quantity:${qty}`
-    // drop[0].insertBefore(menu,drop[0].firstChild);
     cart.unshift({id:obj.id,name:obj.name,quantity:qty})
     addToDropDown(obj,qty)
     }
@@ -86,14 +83,28 @@ function addToDropDown(obj,qty){
 export function updateAmount(){
     cartAmount.textContent = countProduct();
 }
+
 //Count Product In Cart
 function countProduct() {
-    var total = 0;
-        for (let i = 0; i < cart.length; i++) {
-            total += cart[i].quantity;
+    // var total = 0;
+        // for (let i = 0; i < cart.length; i++) {
+        //     total += cart[i].quantity;
+        // }
+    // let itemQuantity = item.quantity
+    
+    if(cart.length==1){
+
+        return cart[0].quantity
+        
         }
-        // CookieUtil.set("Total",total)
-    return total;
+        
+        const total= cart.reduce((prod1,prod2)=> prod1.quantity+prod2.quantity)
+        
+        console.log(total);
+        
+        return total
+
+    // return total;
 }
 
 const cart_duplicate=(id)=>{
@@ -104,9 +115,11 @@ const cart_duplicate=(id)=>{
   }
   return false
 }
+
 const findItemInCart=(id)=>{
     return cart.find(item=> item.id==id )
 }
+
 const resetCart=()=>{
     const confirm_del=confirm("Delete all item in your cart?")
     if(confirm_del){
