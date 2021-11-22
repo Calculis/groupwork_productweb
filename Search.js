@@ -22,6 +22,14 @@ searchbt.addEventListener(
   false
 );
 
+// ฟังก์ชันการทำงานของปุ่ม Search เมื่อกดแล้วจะเรียกฟังก์ชัน SearchButton มาใช้งาน
+// โดยจะเก็บค่าของคำที่ค้นหาไว้ที่ตัวแปร inputName
+// แล้วนำ Inputname ไปใส่ค่าที่อยู่ที่หัวข้อหน้าเว็บว่าค้นหาคำว่าอะไรไป
+// ตัวแปร reg จะเป็นตัวแปรที่แปลงค่าที่ได้รับมาให้เป็นตัวอักษรตัวเล็ก
+// เข้าเงื่อนไขถ้าไม่มีค่าอะไรในช่องค้นหาจะขึ้น alert มาว่า Please Reload Pages
+// ถ้าเป็น else จะเข้า for loop เพื่อเช็ตทุกค่าที่เก็บไว้มาจาก inputName โดยเทียบกับ produxts.name
+// ใช้ DOM ในการดึงข้อมูลออกมาแสดงข้อมูลในหน้าเว็บโดยที่จะถ้าข้อึวามที่พิมพ์ไปตรงกับชื่อของสินค้าจะให้ display เป็น black ให้แสดงออกมา
+// ถ้าไม่ตรงก็จะให้ display เป็น none เพื่อซ่อนเอาไว้
 function SearchButton() {
   var inputName = sbt.value;
   console.log("Test");
@@ -44,7 +52,7 @@ function SearchButton() {
   }
   
 }
-
+// เป็นฟังก์ชันที่จะแสดงสินค้าทั้งหมดเมื่อกดปุ่ม reload 
 const back_to_main = () => {
   for (let i = 0; chilProduct.length > i; i++) {
     chilProduct[i].style.display = "block";
@@ -52,13 +60,10 @@ const back_to_main = () => {
 };
 reload.addEventListener("click", back_to_main);
 
-
+// เป็นฟังก์ชีนที่จะให้ช่องค้นหาแสดงออกมา
 const toggle_bar=()=>{
   search_toggle.style.display='none'
   search_tab.style.display="block"
-
-
-
 }
 
 search_toggle.addEventListener("click",toggle_bar)
